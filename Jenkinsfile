@@ -9,7 +9,7 @@ stages
 {
 			withAWS(region: 'us-east-1') 
 {
-    sh 'aws cloudformation create-stack --stack-name cloudformation --template-body file://sebucket.json'
+    sh 'aws cloudformation create-stack --stack-name cloudformation --template-body file://instance.json'
 }
 }
 }

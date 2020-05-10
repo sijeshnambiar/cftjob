@@ -3,11 +3,14 @@ pipeline
 agent any
 stages
 {
-	stage ('source code checkout')
+	stage ('cloudformation creation')
 {
 		steps
 {
-			git branch: 'master', url: 'https://github.com/sijeshnambiar/maven-project'
+			withAWS(region: 'us-east-1') 
+{
+    sh 'aws cloudformation create-stack --stack-name cloudformation --template-body file://ec2-user.jason'
+}
 }
 }
 	

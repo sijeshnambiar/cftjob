@@ -5,7 +5,7 @@
         "S3cftbucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-				"BucketName": "S3cftbucket"
+				"BucketName": "s3cftbucket"
             }
         }
     }

@@ -6,8 +6,8 @@
         "GroupDescription" : "Enable SSH access via port 22, HTTP via 80 and ICMP via anyport",
         "SecurityGroupIngress" : [ {
           "IpProtocol" : "tcp",
-          "FromPort" : "0",
-          "ToPort" : "65535",
+          "FromPort" : "22",
+          "ToPort" : "22",
           "CidrIp" : "0.0.0.0/0"}]
         }
 	},

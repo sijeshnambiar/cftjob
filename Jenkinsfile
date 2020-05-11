@@ -12,8 +12,6 @@ stages
     sh 'aws cloudformation create-stack --stack-name cloudformation --template-body file://instance.json'
 }
 }
-}
-	
-	
+}	
 }
 }

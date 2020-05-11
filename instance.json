@@ -1,26 +1,25 @@
-"Resources" : {
-    "EC2Instance" :
 {
-  "Type" : "AWS::EC2::Instance",
-  "Properties" : {
-      "AvailabilityZone" : "us-east-1d",
-      "ImageId" : "ami-0323c3dd2da7fb37d",
-      "InstanceType" : "t2.micro",
-      "KeyName" : "DevOps2020",
+"Resources" : {
+    "EC2Instance" : {
+      "Type" : "AWS::EC2::Instance",
+      "Properties" : {
+        "AvailabilityZone" : "us-east-1d",
+		"ImageId" : "ami-0323c3dd2da7fb37d",
+		"InstanceType" : "t2.micro",
+		"KeyName" : "DevOps2020",
+      }
     }
-}
 
-     "InstanceSecurityGroup" : 
-	{
+    "InstanceSecurityGroup" : {
       "Type" : "AWS::EC2::SecurityGroup",
       "Properties" : {
-        "GroupDescription" : "Enable SSH access via port 22",
+        "GroupDescription" : "Enable SSH access via port 22, HTTP via 80 and ICMP via anyport",
         "SecurityGroupIngress" : [ {
           "IpProtocol" : "tcp",
           "FromPort" : "0",
           "ToPort" : "65535",
-          "CidrIp" : "0.0.0.0/0"
-}]
+          "CidrIp" : "0.0.0.0/0"}]
+        }
 	}
 }
 }

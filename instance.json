@@ -6,6 +6,19 @@
       "AvailabilityZone" : "us-east-1a",
       "ImageId" : "ami-0323c3dd2da7fb37d",
       "InstanceType" : "t2.micro",
+      "KeyName" : "DevOps2020",
     }
 }
+}
+"InstanceSecurityGroup" : {
+      "Type" : "AWS::EC2::SecurityGroup",
+      "Properties" : {
+        "GroupDescription" : "Enable SSH access via port 22",
+        "SecurityGroupIngress" : [ {
+          "IpProtocol" : "tcp",
+          "FromPort" : "22",
+          "ToPort" : "22",
+          "CidrIp" : { "Ref" : "SSHLocation"}
+        },
+	}
 }

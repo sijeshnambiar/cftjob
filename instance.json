@@ -6,7 +6,7 @@
       "AvailabilityZone" : "us-east-1d",
       "ImageId" : "ami-0323c3dd2da7fb37d",
       "InstanceType" : "t2.micro",
-      "KeyName" : "DevOps2020,"
+      "KeyName" : "default,"
     }
 }
 }

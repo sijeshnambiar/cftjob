@@ -7,7 +7,7 @@ stages
 {
 		steps
 {
-			withAWS(region: 'us-east-1a') 
+			withAWS(region: 'us-east-1') 
 {
     sh 'aws cloudformation create-stack --stack-name cloudformation --template-body file://instance.json'
 }

@@ -2,7 +2,7 @@
    "Description":"Create EC2Instance",
    "Resources":{
       "InstanceSecurityGroup":{
-         "Type":"AWS::EC2::Bucket",
+         "Type":"AWS::EC2::SecurityGroup",
          "Properties":{
             "SecurityGroupIngress":[
                {

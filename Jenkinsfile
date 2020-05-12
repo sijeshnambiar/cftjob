@@ -7,7 +7,7 @@ stages
 {
 		steps
 {
-			withAWS(credentials: 'jenkins5', region: 'us-east-1') 
+			withAWS(credentials: 'cft007', region: 'us-east-1') 
 {
     sh 'aws cloudformation create-stack --stack-name cloudformation --template-body file://combine.json'
 }
